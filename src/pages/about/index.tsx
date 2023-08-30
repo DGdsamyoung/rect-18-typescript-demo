@@ -7,23 +7,21 @@
 
 import React from "react";
 interface isState {
-  date: Date,
-
+  title: string,
 }
 
-export default class Clock extends React.Component<any, isState> {
+export default class About extends React.Component<any, isState> {
   constructor (props: any) {
     super(props);
     this.state = {
-      date: new Date()
+      title: 'about'
     };
   }
 
   render () {
     return (
       <div>
-        <h1>现在时间!</h1>
-        <h2> {this.state.date.toDateString()} </h2>
+        <h1>{this.state.title}</h1>
       </div>
     );
   }
